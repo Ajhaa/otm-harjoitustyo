@@ -1,0 +1,112 @@
+
+    Helppoo ja kivaa
+
+ tiedostoja/file1  | 1 -
+ tiedostoja/file2  | 1 -
+ tiedostoja/file22 | 1 +
+ 3 files changed, 1 insertion(+), 2 deletions(-)
+
+commit f78db4d494343a865c51740866bf2c4474fa1ee5
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 15:15:36 2018 +0200
+
+    tiedostoja
+
+ tiedostoja/file1 | 1 +
+ tiedostoja/file2 | 1 +
+ tiedostoja/file3 | 1 +
+ 3 files changed, 3 insertions(+)
+
+commit 78ae158659e6d9f431285df385c1b5eed9646d0e
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:49:23 2018 +0200
+
+    hunk
+
+ eka.txt    | 5 ++---
+ kolmas.txt | 3 ++-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+commit b13eaf306690d02dd47f25752591191acfcc344d
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:47:10 2018 +0200
+
+    Nimimuutos
+
+ eka.txt      | 9 +++++++++
+ tiedosto.txt | 9 ---------
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+commit ed08b2d6d63e4b23aa4bce54d7f72a9a2808077a
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:46:30 2018 +0200
+
+    Poistettu toinen
+
+ toinen.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit 4d42820795c01794f52c17ffd8a865de95ea5772
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:45:18 2018 +0200
+
+    MUOKATTU
+
+ tiedosto.txt | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit 51deb015f5679765810ca46927bbdd8d8b9621e2
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:44:16 2018 +0200
+
+    LOREM
+
+ tiedosto.txt | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+commit f3f466f75cc71c0ceb1f76050674e6ba7c1fed28
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:42:23 2018 +0200
+
+    stuff
+
+ stuff/uusi.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit b6b7b41d2a4708a722af935be0d033d98ec3b72d
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:41:11 2018 +0200
+
+    muokattu kahta
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 70a2cc7aba9f85cfcfb16505ef9ad03ccf8d7fc3
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:40:30 2018 +0200
+
+    kolmas
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 5994ab4fcf4020b249d680ebd7629e57d037e4a9
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:38:04 2018 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 2 +-
+ toinen.txt   | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 931dbd9897bbb43871a8a4fcbf51d34c6bbf7338
+Author: Ajhaa <atte.h.1998@gmail.com>
+Date:   Wed Mar 14 14:36:55 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
