@@ -4,7 +4,7 @@ Lyhyt ohje kotlin-kehitykseen, erityisesti otm:n raameissa. Käsitellään gradl
 
 # Asennus
 
-Kotlinia kannattaa ehdottomasti kehittää IntelliJ Idean avulla ([linkki](https://www.jetbrains.com/idea/download/#section=linux)).
+Kotlinia kannattaa ehdottomasti kehittää IntelliJ Idean avulla ([linkki](https://www.jetbrains.com/idea/download/#section=linux)) (huom. ideasta on myös maksullinen versio, mutta community edition on täysin ilmainen).
 Asentamisen _pitäisi_ onnistua ilman sudo-oikeuksia linuxilla, kunhan osaa käsitellä tar.gz -tiedostoja.
 
 Idean lisäksi muuta ei pitäisi tarvita. Gradlea voi ajaa komentorilviltä projektikansiossa, siitä lisää myöhemmin.
