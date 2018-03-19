@@ -54,7 +54,7 @@ Avaa konfiguraatioikkuna, ja paina vasemman yläreunan vihreää '+' merkkiä.
 Valitse gradle, ja klikkaa gradle project -kentän viereistä kansio-nappia valitaksesi projektisi.
 Tasks-kenttään kirjoitetaan juuri asennetun application-pluginin tarjoama task 'run'.
 Paina ok, ja nyt ohjelma voidaan käynnistää vihreästä napista. Jos ohjelma valittaa, että main ei löydy, yksi ratkaisu on lisätä
-seuraava koodinpätkä mainin start-metodin alle:
+seuraava koodinpätkä mainin start-metodin alle (ei pitäisi tarvita, mutta jätän tähän varmuuden vuoksi):
 ~~~~
 companion object {
         @JvmStatic
