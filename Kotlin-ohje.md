@@ -49,9 +49,9 @@ Idea luultavasti ehdottaa koodi-ikkunan oikeassa yläreunassa kotlinin konffaami
 alalaidassa gradlen synkronoimista. Tee myös tämä.
 
 Nyt aplikaatiomme pitäisi olla melkein valmis ajettavaksi gradlen kautta.
-Oikean yläkulman "tyhjästä pudotusvalikosta" löytyy vaihtoehto edit configurations.
+Oikean yläkulman "tyhjästä pudotusvalikosta" löytyy vaihtoehto 'edit configurations'.
 Avaa konfiguraatioikkuna, ja paina vasemman yläreunan vihreää '+' merkkiä.
-Valitse gradle, ja klikkaa gradle project -kentän viereistä '...' napin vasemmanpuoleista nappia valitaksesi projektisi.
+Valitse gradle, ja klikkaa gradle project -kentän viereistä kansio-nappia valitaksesi projektisi.
 Tasks-kenttään kirjoitetaan juuri asennetun application-pluginin tarjoama task 'run'.
 Paina ok, ja nyt ohjelma voidaan käynnistää vihreästä napista. Jos ohjelma valittaa, että main ei löydy, yksi ratkaisu on lisätä
 seuraava koodinpätkä mainin start-metodin alle:
