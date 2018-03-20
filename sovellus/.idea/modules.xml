@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/817181207/otm-18_main.iml" filepath="$PROJECT_DIR$/.idea/modules/817181207/otm-18_main.iml" group="otm-18" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/817181207/otm-18_test.iml" filepath="$PROJECT_DIR$/.idea/modules/817181207/otm-18_test.iml" group="otm-18" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/817181207/otm-harjoitustyo-otm-18.iml" filepath="$PROJECT_DIR$/.idea/modules/817181207/otm-harjoitustyo-otm-18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/modules/otm-harjoitustyo-otm-18_main.iml" filepath="$PROJECT_DIR$/../.idea/modules/otm-harjoitustyo-otm-18_main.iml" group="otm-18" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/modules/otm-harjoitustyo-otm-18_test.iml" filepath="$PROJECT_DIR$/../.idea/modules/otm-harjoitustyo-otm-18_test.iml" group="otm-18" />
     </modules>
   </component>
 </project>
