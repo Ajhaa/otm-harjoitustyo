@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.mycompany.unicafe.KassapaateTest" time="0.022" tests="30" errors="0" skipped="0" failures="0">
+<testsuite name="com.mycompany.unicafe.KassapaateTest" time="0.008" tests="30" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -30,7 +30,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="4.13.0-36-generic"/>
+    <property name="os.version" value="4.13.0-37-generic"/>
     <property name="user.home" value="/home/ajhaarni"/>
     <property name="user.timezone" value="Europe/Helsinki"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -61,31 +61,31 @@
   </properties>
   <testcase name="kortinSaldoMuuttuuLadatessa" classname="com.mycompany.unicafe.KassapaateTest" time="0.002"/>
   <testcase name="maukasKateisostoMuuttaaMyytyjenmaaraa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="maukasKorttiostoMuuttaaKortinSaldoa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="maukasKorttiostoMuuttaaKortinSaldoa" classname="com.mycompany.unicafe.KassapaateTest" time="0.002"/>
   <testcase name="edullinenKorttiostoLisaaMyytyja" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="edullinenOstoliianVahanRahaaPalauttaaKaiken" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="maukasKateisostoLisaaKassaa" classname="com.mycompany.unicafe.KassapaateTest" time="0.002"/>
-  <testcase name="maukasKorttiostoLisaaMyytyja" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
+  <testcase name="maukasKateisostoLisaaKassaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="maukasKorttiostoLisaaMyytyja" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="maukasLiianVahanRahaaEiMuutaKortinSaldoa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="kassanMaaraMuuttuuLadatessa" classname="com.mycompany.unicafe.KassapaateTest" time="0.002"/>
-  <testcase name="lounaitaEiMyytyAlussa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="kassanMaaraMuuttuuLadatessa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="lounaitaEiMyytyAlussa" classname="com.mycompany.unicafe.KassapaateTest" time="0.002"/>
   <testcase name="rahamaaraOikeaAlussa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="kassaEiMuutuKorttiostossaMaukas" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
-  <testcase name="edullinenKorttiostoMuuttaaKortinSaldoa" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
+  <testcase name="kassaEiMuutuKorttiostossaMaukas" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="edullinenKorttiostoMuuttaaKortinSaldoa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="edullinenKateisostoMuuttaaMyytyjenmaaraa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="maukasKorttiostoPalauttaaFalseJosKortillaEiRahaa" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
-  <testcase name="vajaaMaukasKateisostoEiLisaaKassaa" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
-  <testcase name="maukasKateisostoAntaaOikeanVaihtorahan" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
+  <testcase name="maukasKorttiostoPalauttaaFalseJosKortillaEiRahaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="vajaaMaukasKateisostoEiLisaaKassaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="maukasKateisostoAntaaOikeanVaihtorahan" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="kassaEiMuutuKorttiostossaEdullinen" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="edullinenLiianVahanRahaaEiMuutaKortinSaldoa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="edullinenLiianVahanRahaaEiMuutaKortinSaldoa" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
   <testcase name="kortinSaldoEiMuutuJosNegatiivinenLataus" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="vajaaEdullinenKateisostoEiLisaaKassaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="edullinenKateisostoAntaaOikeanVaihtorahan" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="kassaEiMuutuJosNegatiivinenLataus" classname="com.mycompany.unicafe.KassapaateTest" time="0.003"/>
-  <testcase name="maukasOstoliianVahanRahaaPalauttaaKaiken" classname="com.mycompany.unicafe.KassapaateTest" time="0.002"/>
+  <testcase name="kassaEiMuutuJosNegatiivinenLataus" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="maukasOstoliianVahanRahaaPalauttaaKaiken" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="edullinenKateisostoLisaaKassaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
-  <testcase name="maukasKorttiostoPalauttaaTrueJosKortillaRahaa" classname="com.mycompany.unicafe.KassapaateTest" time="0.005"/>
-  <testcase name="edullinenKorttiostoPalauttaaTrueJosKortillaRahaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="maukasKorttiostoPalauttaaTrueJosKortillaRahaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
+  <testcase name="edullinenKorttiostoPalauttaaTrueJosKortillaRahaa" classname="com.mycompany.unicafe.KassapaateTest" time="0.001"/>
   <testcase name="epaonnistunutMaukasKateisostoEiMuutaMyytyjenMaaraa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="edullinenKorttiostoPalauttaaFalseJosKortillaEiRahaa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
   <testcase name="epaonnistunutEdullinenKateisostoEiMuutaMyytyjenMaaraa" classname="com.mycompany.unicafe.KassapaateTest" time="0"/>
