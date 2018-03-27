@@ -11,12 +11,15 @@ class LoginScreen() {
     private var screen = VBox()
 
     init {
-        var inputText = TextField()
-        var anchor = AnchorPane(inputText)
+        val inputText = TextField()
+        val anchor = AnchorPane(inputText)
         val button = Button("login")
-        screen = VBox(anchor, button)
+
         AnchorPane.setLeftAnchor(inputText, 40.0)
         AnchorPane.setRightAnchor(inputText, 40.0)
+
+        screen = VBox(anchor, button)
+
         screen.spacing = 5.0
         screen.alignment = Pos.CENTER
     }
