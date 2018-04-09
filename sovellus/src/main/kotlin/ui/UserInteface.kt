@@ -15,23 +15,34 @@ class UserInterface : Application() {
 
     override fun start(primaryStage: Stage) {
         val manager = AccountManager()
-        manager.createAccount("atte")
+        
+        val registrationField = TextField()
+        val registrationAnchor = AnchorPane(registrationField)
+        val registrationButton = Button("create profile")
 
-        val inputText = TextField()
+        
+        val loginField = TextField()
+        val loginAnchor = AnchorPane(loginField)
+        val loginButton = Button("login")
 
-        val anchor = AnchorPane(inputText)
-        val button = Button("login")
+        val screen = VBox(registrationAnchor, registrationButton , loginAnchor, loginButton)
 
-        val screen = VBox(anchor, button)
-
-        button.setOnAction {
-            if (manager.login(inputText.text)) {
+        loginButton.setOnAction {
+            if (manager.login(loginField.text)) {
                 primaryStage.scene = Scene(VBox(Text("logged in")), 256.0, 144.0)
             }
         }
 
-        AnchorPane.setLeftAnchor(inputText, 40.0)
-        AnchorPane.setRightAnchor(inputText, 40.0)
+        registrationButton.setOnAction {
+            manager.createAccount(registrationField.text)
+            registrationField.text = ""
+        }
+
+        AnchorPane.setLeftAnchor(loginField, 40.0)
+        AnchorPane.setRightAnchor(loginField, 40.0)
+        AnchorPane.setLeftAnchor(registrationField, 40.0)
+        AnchorPane.setRightAnchor(registrationField, 40.0)
+
 
 
         screen.spacing = 5.0
