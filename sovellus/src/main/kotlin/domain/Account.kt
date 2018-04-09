@@ -13,9 +13,6 @@ class Account(var name: String) {
      * @param other the target of comparision
      */
     override fun equals(other: Any?): Boolean {
-        if (other == null) {
-            return false
-        }
         if (other !is Account) {
             return false
         }
