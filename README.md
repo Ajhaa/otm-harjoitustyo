@@ -1,11 +1,9 @@
 # Otm harjoitustyö
 
-Tämä on otm harjoitustyö  
+Tämä on otm harjoitustyö Kotinilla  
 
-**HUOM** *erittäin* keskeneräinen  
+Ohjelman voi ajaa /sovellus kansiossa komennolla gradle run. Testit voi ajaa komennolla gradle test.
+Jacoco-raportin saa komennolla gradle jacocoTestReport. Jos omalla koneella ei ole gradlea asennettuna, sitä voi ajaa /sovellus kansion ./gradlew -scriptillä.
 
 [Vaatimusmäärittely](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
-
-[gitlog.txt](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)  
-[komentorivi.txt](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-MERGE CONFLICT
+[Tuntikirjanpito](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/ty%C3%B6aikakirjanpito.md)
