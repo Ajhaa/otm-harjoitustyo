@@ -7,3 +7,4 @@
 | 26.3. | 3    | Projektin idean suunnittelua, yhden hylätyn idean testaaminen |
 | 27.3. | 1    | Määrittelydokumentti |
 | 9.4   | 1    | Yksinkertainen login ja tunnuksen luonti |
+|       | 2    | Testejä, jacoco, conffausta |
