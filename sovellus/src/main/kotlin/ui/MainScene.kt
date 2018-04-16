@@ -31,24 +31,28 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
 
         var result = ToggleGroup()
 
-        val button = Button("submit")
+        val submit = Button("submit")
 
-        button.setOnAction {
+        submit.setOnAction {
             val radio = result.selectedToggle as RadioButton
             val res = if (radio.text == "win") Result.Win else Result.Loss
+
             val drop1 = dropdown1.value
             val drop2 = dropdown2.value
+
             manager.addResult(Rank(drop1, drop2), res)
-            for (r in manager.getCurrentAccount()!!.results) {
-                println(r)
-            }
-            println("----------------")
+        }
+
+        val toHistory = Button("match history")
+
+        toHistory.setOnAction {
+            app.setHistoryScene()
         }
 
         val dropdowns = HBox(dropdown1, dropdown2)
 
         result.toggles.addAll(radio1, radio2)
-        screen.children.addAll(welcomeText, radio1, radio2, dropdowns, button)
+        screen.children.addAll(welcomeText, radio1, radio2, dropdowns, submit, toHistory)
 
         return Scene(screen)
     }

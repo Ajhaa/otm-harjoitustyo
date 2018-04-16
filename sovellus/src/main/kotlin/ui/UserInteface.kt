@@ -1,5 +1,6 @@
 package ui
 
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match
 import javafx.application.Application
 import javafx.scene.Scene
 import javafx.stage.Stage
@@ -12,6 +13,8 @@ class UserInterface : Application() {
 
     override fun init() {
         scene = LoginScene(manager, this).getScene()
+        //one hardcoded account for now, will delete later
+        manager.createAccount("atte")
     }
 
     override fun start(stage: Stage) {
@@ -22,5 +25,9 @@ class UserInterface : Application() {
 
     fun setMainScene() {
         primaryStage?.scene = MainScene(manager, this).getScene()
+    }
+
+    fun setHistoryScene() {
+        primaryStage?.scene = MatchHistory(manager, this).getScene()
     }
 }
