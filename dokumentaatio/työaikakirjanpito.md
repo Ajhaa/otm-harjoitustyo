@@ -8,3 +8,6 @@
 | 27.3. | 1    | Määrittelydokumentti |
 | 9.4   | 1    | Yksinkertainen login ja tunnuksen luonti |
 |       | 2    | Testejä, jacoco, conffausta |
+| 16.4  | 2    | Refaktorointi, yksinkertainen lisäysruutu |
+|       | 1    | Ktlint, jacoco|
+|total  | 16
