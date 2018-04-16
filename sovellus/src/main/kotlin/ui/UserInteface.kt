@@ -4,8 +4,6 @@ import javafx.application.Application
 import javafx.scene.Scene
 import javafx.stage.Stage
 import domain.AccountManager
-import javafx.scene.layout.VBox
-import javafx.scene.text.Text
 
 class UserInterface : Application() {
     var scene: Scene? = null

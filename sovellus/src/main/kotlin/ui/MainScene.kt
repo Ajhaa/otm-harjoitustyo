@@ -1,6 +1,8 @@
 package ui
 
 import domain.AccountManager
+import domain.Enums.Rank
+import domain.Enums.Result
 import domain.Enums.Tier
 import javafx.scene.Scene
 import javafx.scene.control.Button
@@ -13,7 +15,7 @@ import javafx.scene.text.Text
 
 class MainScene(val manager: AccountManager, val app: UserInterface) {
 
-    fun getScene() : Scene {
+    fun getScene(): Scene {
         var screen = VBox()
         var welcomeText = Text("Welcome ${manager.getCurrentAccount()}\nRecord a result:")
 
@@ -33,17 +35,21 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
 
         button.setOnAction {
             val radio = result.selectedToggle as RadioButton
+            val res = if (radio.text == "win") Result.Win else Result.Loss
             val drop1 = dropdown1.value
             val drop2 = dropdown2.value
-            println(radio.text + " " + drop1 + " " + drop2)
+            manager.addResult(Rank(drop1, drop2), res)
+            for (r in manager.getCurrentAccount()!!.results) {
+                println(r)
+            }
+            println("----------------")
         }
 
         val dropdowns = HBox(dropdown1, dropdown2)
 
-        result.toggles.addAll(radio1,radio2)
+        result.toggles.addAll(radio1, radio2)
         screen.children.addAll(welcomeText, radio1, radio2, dropdowns, button)
 
         return Scene(screen)
-
     }
 }

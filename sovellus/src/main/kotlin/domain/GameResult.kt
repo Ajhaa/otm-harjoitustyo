@@ -1,10 +1,11 @@
 package domain
 
-import domain.Enums.*
+import domain.Enums.Rank
+import domain.Enums.Result
 
 class GameResult(val rank: Rank, val result: Result) {
 
-    override fun equals(other: Any?): Boolean {
-        return super.equals(other)
+    override fun toString(): String {
+        return "$result, $rank"
     }
 }

@@ -1,7 +1,6 @@
 package ui
 
 import domain.AccountManager
-import javafx.application.Application
 import javafx.geometry.Pos
 import javafx.scene.Scene
 import javafx.scene.control.Button
@@ -9,14 +8,12 @@ import javafx.scene.control.TextField
 import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
 
-
 class LoginScene(val manager: AccountManager, val app: UserInterface) {
-    fun getScene() : Scene {
+    fun getScene(): Scene {
 
         val registrationField = TextField()
         val registrationAnchor = AnchorPane(registrationField)
         val registrationButton = Button("create profile")
-
 
         val loginField = TextField()
         val loginAnchor = AnchorPane(loginField)
@@ -40,8 +37,6 @@ class LoginScene(val manager: AccountManager, val app: UserInterface) {
         AnchorPane.setRightAnchor(loginField, 40.0)
         AnchorPane.setLeftAnchor(registrationField, 40.0)
         AnchorPane.setRightAnchor(registrationField, 40.0)
-
-
 
         screen.spacing = 5.0
         screen.alignment = Pos.CENTER

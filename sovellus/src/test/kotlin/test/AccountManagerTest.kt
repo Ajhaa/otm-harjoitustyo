@@ -4,13 +4,10 @@ import domain.AccountManager
 import domain.Enums.Rank
 import domain.Enums.Result
 import domain.Enums.Tier
-import domain.GameResult
 import org.junit.Before
 import org.junit.Test
-import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
-
 
 class AccountManagerTest {
     var manager = AccountManager()

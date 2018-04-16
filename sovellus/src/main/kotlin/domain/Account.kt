@@ -22,7 +22,6 @@ class Account(var name: String) {
         }
 
         return other.name == this.name
-
     }
 
     override fun toString(): String {

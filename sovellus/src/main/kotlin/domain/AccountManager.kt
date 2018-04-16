@@ -16,8 +16,7 @@ class AccountManager() {
     private var currentAccount: Account? = null
     private var accounts = HashSet<Account>()
 
-
-    fun login(loginName: String) : Boolean {
+    fun login(loginName: String): Boolean {
         val account = accounts.find { n -> n.name == loginName }
 
         if (account != null) {
@@ -28,15 +27,15 @@ class AccountManager() {
         return false
     }
 
-    fun getCurrentAccount() : Account? {
+    fun getCurrentAccount(): Account? {
         return currentAccount
     }
 
-    fun createAccount(accountName: String) : Boolean {
+    fun createAccount(accountName: String): Boolean {
         return accounts.add(Account(accountName))
     }
 
-    fun addResult(rank: Rank, result: Result) : Boolean {
+    fun addResult(rank: Rank, result: Result): Boolean {
         val newResult = GameResult(rank, result)
         val status = currentAccount?.addResult(newResult)
         return status != null
