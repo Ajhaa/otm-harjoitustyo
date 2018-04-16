@@ -1,6 +1,10 @@
 package test
 
 import domain.AccountManager
+import domain.Enums.Rank
+import domain.Enums.Result
+import domain.Enums.Tier
+import domain.GameResult
 import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertEquals
@@ -31,5 +35,11 @@ class AccountManagerTest {
     fun loginFailsWithWrongAccountName() {
         manager.createAccount("atte")
         assertFalse(manager.login("otso"))
+    }
+
+    @Test
+    fun addingResultToNullReturnsFalse() {
+        val b = manager.addResult(Rank(Tier.Bronze, 1), Result.Win)
+        assertFalse(b)
     }
 }

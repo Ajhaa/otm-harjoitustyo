@@ -1,5 +1,8 @@
 package domain
 
+import domain.Enums.Rank
+import domain.Enums.Result
+
 /**
  * The AccountManager class keeps track of the registered accounts, and
  * handles login and logout(TODO)
@@ -15,16 +18,27 @@ class AccountManager() {
 
 
     fun login(loginName: String) : Boolean {
-        for (acc in accounts) {
-            if (acc.name == loginName) {
-                currentAccount = acc
-                return true
-            }
+        val account = accounts.find { n -> n.name == loginName }
+
+        if (account != null) {
+            currentAccount = account
+            return true
         }
+
         return false
+    }
+
+    fun getCurrentAccount() : Account? {
+        return currentAccount
     }
 
     fun createAccount(accountName: String) : Boolean {
         return accounts.add(Account(accountName))
+    }
+
+    fun addResult(rank: Rank, result: Result) : Boolean {
+        val newResult = GameResult(rank, result)
+        val status = currentAccount?.addResult(newResult)
+        return status != null
     }
 }

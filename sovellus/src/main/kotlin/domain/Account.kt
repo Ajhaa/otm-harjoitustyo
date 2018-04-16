@@ -7,7 +7,11 @@ package domain
  */
 class Account(var name: String) {
 
+    var results = ArrayList<GameResult>()
 
+    fun addResult(res: GameResult) {
+        results.add(res)
+    }
     /**
      * compares two account objects by name
      * @param other the target of comparision
@@ -19,5 +23,9 @@ class Account(var name: String) {
 
         return other.name == this.name
 
+    }
+
+    override fun toString(): String {
+        return name
     }
 }
