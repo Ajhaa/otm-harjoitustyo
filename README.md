@@ -3,7 +3,8 @@
 Tämä on otm harjoitustyö Kotinilla  
 
 [Vaatimusmäärittely](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)  
-[Tuntikirjanpito](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/ty%C3%B6aikakirjanpito.md)
+[Tuntikirjanpito](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/ty%C3%B6aikakirjanpito.md)  
+[Arkkitehtuurikuvaus](https://github.com/Ajhaa/otm-harjoitustyo/tree/master/dokumentaatio/arkkitehtuuri.md)
 
 
 Ohjelma ajetaan kansiossa `/sovellus` komennolla `gradle run`.   
