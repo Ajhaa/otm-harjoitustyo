@@ -10,4 +10,5 @@
 |       | 2    | Testejä, jacoco, conffausta |
 | 16.4  | 2    | Refaktorointi, yksinkertainen lisäysruutu |
 |       | 1    | Ktlint, jacoco|
-|total  | 16
+| 17.4  | 0,5  | Dokumentaatio | 
+|total  | 16,5 |
