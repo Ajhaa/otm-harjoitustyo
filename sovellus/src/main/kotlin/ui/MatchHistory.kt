@@ -8,11 +8,11 @@ import javafx.scene.text.Text
 
 class MatchHistory(val manager: AccountManager, val app: UserInterface) {
 
-    fun getScene() : Scene {
+    fun getScene(): Scene {
         var screen = VBox()
         var list = ArrayList<String>()
 
-        manager.getCurrentAccount()!!.results.forEach{
+        manager.getCurrentAccount()!!.results.forEach {
             n -> screen.children.add(Text(n.toString()))
         }
 

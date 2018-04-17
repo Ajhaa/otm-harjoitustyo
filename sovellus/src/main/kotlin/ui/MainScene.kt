@@ -23,8 +23,7 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
         val radio2 = RadioButton("loss")
 
         val dropdown1 = ComboBox<Tier>()
-        dropdown1.items
-                .addAll(Tier.values())
+        dropdown1.items.addAll(Tier.values())
 
         val dropdown2 = ComboBox<Int>()
         dropdown2.items.addAll(1..5)
