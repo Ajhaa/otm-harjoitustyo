@@ -8,5 +8,5 @@ Tämä on otm harjoitustyö Kotinilla
 
 Ohjelma ajetaan kansiossa `/sovellus` komennolla `gradle run`.   
 Testit voi ajaa komennolla ```gradle test```. Testit toimivat tällä hetkellä hieman oudosti niin, että onnistuneista testeistä ei tule minkäänlaisia tilastoja, pelkkä viesti build successful. Tilastot näkee komennolla `gradle cleanTest test`.   
-Jacoco-raportin saa komennolla `gradle jacocoTestReport`.  
+Jacoco-raportin saa komennolla `gradle jacocoTestReport`. KTLint ajetaan komennolla ```gradle ktlintCheck```. Ajo ilmoittaa vain virheistä, tyhjä ajo on onnistuminen.
 Jos omalla koneella ei ole gradlea asennettuna, sitä voi ajaa `/sovellus` kansion `./gradlew` -scriptillä. Esim `./gradlew run`.
