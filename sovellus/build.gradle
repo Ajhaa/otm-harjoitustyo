@@ -12,6 +12,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.16"
         classpath "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:3.2.0"
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.2'
     }
 
 }
@@ -26,6 +27,8 @@ apply plugin: 'application'
 apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'jacoco'
 apply plugin: "org.jlleitschuh.gradle.ktlint"
+apply plugin: 'com.github.johnrengelman.shadow'
+
 
 
 
