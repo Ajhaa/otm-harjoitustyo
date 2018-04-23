@@ -48,10 +48,16 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
             app.setHistoryScene()
         }
 
+        val toStatistics = Button("stats")
+
+        toStatistics.setOnAction {
+            app.setStatisticScene()
+        }
+
         val dropdowns = HBox(dropdown1, dropdown2)
 
         result.toggles.addAll(radio1, radio2)
-        screen.children.addAll(welcomeText, radio1, radio2, dropdowns, submit, toHistory)
+        screen.children.addAll(welcomeText, radio1, radio2, dropdowns, submit, toHistory, toStatistics)
 
         return Scene(screen)
     }

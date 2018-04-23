@@ -29,4 +29,8 @@ class UserInterface : Application() {
     fun setHistoryScene() {
         primaryStage?.scene = MatchHistory(manager, this).getScene()
     }
+
+    fun setStatisticScene() {
+        primaryStage?.scene = Statistics(manager).getScene()
+    }
 }
