@@ -14,6 +14,7 @@ class UserInterface : Application() {
         scene = LoginScene(manager, this).getScene()
         //one hardcoded account for now, will delete later
         manager.createAccount("atte")
+        //onko nyt oikea branch
     }
 
     override fun start(stage: Stage) {
