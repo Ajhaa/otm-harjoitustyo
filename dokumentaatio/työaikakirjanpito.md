@@ -11,4 +11,8 @@
 | 16.4  | 2    | Refaktorointi, yksinkertainen lisäysruutu |
 |       | 1    | Ktlint, jacoco|
 | 17.4  | 0,5  | Dokumentaatio | 
+| 23.4  | 2    | Tilastokuvaaja |
+|       | 1    | Database-testausta |
+| 24.4  | 1    | Siivousyritys |
+|       | 0.5  | Dokumentaatio |
 |total  | 16,5 |
