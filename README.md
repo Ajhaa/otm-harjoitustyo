@@ -1,10 +1,12 @@
 # Otm harjoitustyö
 
-Tämä on otm harjoitustyö Kotinilla  
+Tämä on otm harjoitustyö Kotinilla. Ohjelmalla voi pitää kirjaa Battlerite-pelin matsien tuloksista, ja sijoituksen kehittymisestä.  
 
 [Vaatimusmäärittely](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)  
 [Tuntikirjanpito](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/ty%C3%B6aikakirjanpito.md)  
-[Arkkitehtuurikuvaus](https://github.com/Ajhaa/otm-harjoitustyo/tree/master/dokumentaatio/arkkitehtuuri.md)
+[Arkkitehtuurikuvaus](https://github.com/Ajhaa/otm-harjoitustyo/tree/master/dokumentaatio/arkkitehtuuri.md)  
+  
+[release 0.1](https://github.com/Ajhaa/otm-harjoitustyo/releases/tag/0.1)
 
 
 Ohjelma ajetaan kansiossa `/sovellus` komennolla `gradle run`.   
