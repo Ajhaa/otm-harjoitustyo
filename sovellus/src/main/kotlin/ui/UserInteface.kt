@@ -4,11 +4,13 @@ import javafx.application.Application
 import javafx.scene.Scene
 import javafx.stage.Stage
 import domain.AccountManager
+import domain.Statistics
 
 class UserInterface : Application() {
     var scene: Scene? = null
     var primaryStage: Stage? = null
     val manager = AccountManager()
+    val statistics = Statistics(manager)
 
     override fun init() {
         scene = LoginScene(manager, this).getScene()
@@ -31,6 +33,6 @@ class UserInterface : Application() {
     }
 
     fun setStatisticScene() {
-        primaryStage?.scene = Statistics(manager).getScene()
+        primaryStage?.scene = StatsScene(statistics ,this).getScene()
     }
 }
