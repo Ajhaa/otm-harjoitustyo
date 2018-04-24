@@ -8,7 +8,7 @@ import javafx.scene.chart.XYChart
 
 class Statistics(var manager: AccountManager) {
 
-    fun getScene() : Scene {
+    fun getScene(): Scene {
         var results = manager.getCurrentAccount()!!.results
         val biggestRank = manager.getHighestRankValue().toDouble()
 
@@ -16,8 +16,6 @@ class Statistics(var manager: AccountManager) {
         var yAxis = NumberAxis(1.0, biggestRank, 1.0)
         xAxis.label = "games"
         yAxis.label = "rank"
-
-
 
         var chart: LineChart<Number, Number> = LineChart(xAxis, yAxis)
         chart.title = "Rank development"
@@ -33,6 +31,5 @@ class Statistics(var manager: AccountManager) {
         chart.data.add(data)
 
         return Scene(chart)
-
     }
 }

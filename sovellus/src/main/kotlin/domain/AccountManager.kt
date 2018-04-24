@@ -41,7 +41,7 @@ class AccountManager() {
         return status != null
     }
 
-    fun getHighestRankValue() : Int {
+    fun getHighestRankValue(): Int {
         return currentAccount!!.results
                 .stream()
                 .mapToInt { n -> n.rank.getRankAsNumber() }
