@@ -14,4 +14,5 @@
 | 23.4  | 2    | Tilastokuvaaja |
 |       | 1    | Database-testausta |
 | 24.4  | 1.5  | Siivousyritys, dokumentaatio |
-|total  | 21 |
+| 26.4  | 3    | Tietokannat
+|total  | 24 |
