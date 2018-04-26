@@ -31,6 +31,6 @@ class UserInterface : Application() {
     }
 
     fun setStatisticScene() {
-        primaryStage?.scene = Statistics(manager).getScene()
+        primaryStage?.scene = Statistics(manager, this).getScene()
     }
 }
