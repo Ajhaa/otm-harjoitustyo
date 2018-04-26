@@ -1,5 +1,6 @@
 package ui
 
+import db.AccountDao
 import db.Database
 import javafx.application.Application
 import javafx.scene.Scene
@@ -9,8 +10,9 @@ import domain.AccountManager
 class UserInterface : Application() {
     var scene: Scene? = null
     var primaryStage: Stage? = null
-    val manager = AccountManager()
-    val Database = db.Database("jdbc:sqlite:testi.db")
+    val database = Database("jdbc:sqlite:database.db")
+    val accountDao = AccountDao(database.connection)
+    val manager = AccountManager(accountDao)
 
     override fun init() {
         scene = LoginScene(manager, this).getScene()

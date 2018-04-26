@@ -1,5 +1,6 @@
 package domain
 
+import db.AccountDao
 import domain.Enums.Rank
 import domain.Enums.Result
 
@@ -12,9 +13,10 @@ import domain.Enums.Result
  * @constructor empty constructor
  */
 
-class AccountManager() {
+class AccountManager(val accountDao: AccountDao) {
     private var currentAccount: Account? = null
-    private var accounts = HashSet<Account>()
+    private var accounts = accountDao.getAll()
+
 
     fun login(loginName: String): Boolean {
         val account = accounts.find { n -> n.name == loginName }
@@ -32,12 +34,19 @@ class AccountManager() {
     }
 
     fun createAccount(accountName: String): Boolean {
-        return accounts.add(Account(accountName))
+        val account = Account(accountName, ArrayList())
+        if (!accounts.contains(account)) {
+            accounts.add(account)
+            accountDao.add(account)
+            return true
+        }
+        return false
     }
 
     fun addResult(rank: Rank, result: Result): Boolean {
         val newResult = GameResult(rank, result)
         val status = currentAccount?.addResult(newResult)
+        accountDao.addResult(newResult, currentAccount!!.name)
         return status != null
     }
 
