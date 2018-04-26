@@ -42,6 +42,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile files ('libs/sqlite-jdbc-3.21.0.jar')
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }

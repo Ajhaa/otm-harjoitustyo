@@ -1,5 +1,5 @@
 package domain.Enums
 
-enum class Tier {
+enum class Tier() {
     Bronze, Silver, Gold, Platinum, Diamond, Master, Grandmaster
 }
