@@ -1,20 +1,24 @@
 package test
 
+import db.AccountDao
+import db.Database
 import domain.AccountManager
 import domain.Enums.Rank
 import domain.Enums.Result
 import domain.Enums.Tier
 import org.junit.Before
 import org.junit.Test
+import java.sql.DriverManager
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class AccountManagerTest {
-    var manager = AccountManager()
+    val database = Database("jdbc:sqlite:test.db")
+    var manager = AccountManager(AccountDao(database.connection))
 
     @Before
     fun setup() {
-        manager = AccountManager()
+        manager = AccountManager(AccountDao(database.connection))
     }
 
     @Test

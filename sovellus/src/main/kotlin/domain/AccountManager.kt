@@ -29,8 +29,11 @@ class AccountManager(val accountDao: AccountDao) {
         return false
     }
 
-    fun getCurrentAccount(): Account? {
-        return currentAccount
+    /**
+     * errors is current account is null, call safely
+     */
+    fun getCurrentAccount(): Account {
+        return currentAccount!!
     }
 
     fun createAccount(accountName: String): Boolean {
@@ -44,6 +47,9 @@ class AccountManager(val accountDao: AccountDao) {
     }
 
     fun addResult(rank: Rank, result: Result): Boolean {
+        if (currentAccount == null) {
+            return false
+        }
         val newResult = GameResult(rank, result)
         val status = currentAccount?.addResult(newResult)
         accountDao.addResult(newResult, currentAccount!!.name)
