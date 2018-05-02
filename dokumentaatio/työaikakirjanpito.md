@@ -13,6 +13,7 @@
 | 17.4  | 0,5  | Dokumentaatio | 
 | 23.4  | 2    | Tilastokuvaaja |
 |       | 1    | Database-testausta |
-| 24.4  | 1.5  | Siivousyritys, dokumentaatio |
+| 24.4  | 1,5  | Siivousyritys, dokumentaatio |
 | 26.4  | 3    | Tietokannat
-|total  | 24 |
+| 2.5   | 1,5  | Uloskirjautuminen, dokumentaatiota |
+|total  | 25,5 |
