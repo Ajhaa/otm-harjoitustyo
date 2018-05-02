@@ -26,7 +26,6 @@ class Statistics(var manager: AccountManager, val app: UserInterface) {
 
         var data: XYChart.Series<Number, Number> = XYChart.Series()
 
-
         for (r in results) {
             data.data.add(XYChart.Data(r.key, r.value))
         }

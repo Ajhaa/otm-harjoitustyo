@@ -2,12 +2,16 @@ package domain
 
 /**
  * A simple account class
- * @param name The name of the account. Must be unique.
- * @constructor currently only defines name
+ * Name and result list defined in constructor. If no result list specified, new empty list is created.
  */
 class Account(var name: String, val results: ArrayList<GameResult>) {
 
     constructor(name: String) : this(name, ArrayList())
+
+    /**
+     * adds a new GameResult into the result list.
+     * @param res the GameResult object to be added
+     */
 
     fun addResult(res: GameResult) {
         results.add(res)

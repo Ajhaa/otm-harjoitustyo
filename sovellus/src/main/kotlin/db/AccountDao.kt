@@ -2,13 +2,18 @@ package db
 
 import domain.Account
 import domain.GameResult
-import java.sql.*
+import java.sql.Connection
 
-class AccountDao(val connection: Connection){
+/**
+ * used to access the Account table, and indirectly also the result table in the database
+ */
+class AccountDao(val connection: Connection) {
 
     val resultDao = ResultDao(connection)
-
-    fun getAll() : ArrayList<Account> {
+    /**
+     * returns all of the accounts in the database as a list. Uses result dao to fetch the corresponding results
+     */
+    fun getAll(): ArrayList<Account> {
         val statement = connection.createStatement()
         val result = statement.executeQuery("SELECT * FROM Account")
 
@@ -23,7 +28,11 @@ class AccountDao(val connection: Connection){
         return accounts
     }
 
-    fun findByName(name: String) : Account? {
+    /**
+     * used to find a single account by name. returns null if no account found
+     * @param name the name of the account
+     */
+    fun findByName(name: String): Account? {
         val statement = connection.prepareStatement("SELECT * FROM Account WHERE name = ?")
         statement.setString(1, name)
         val result = statement.executeQuery()
@@ -38,7 +47,7 @@ class AccountDao(val connection: Connection){
         return Account(result.getString("name"), results)
     }
 
-    fun findAccountId(name: String) : Int{
+    private fun findAccountId(name: String): Int {
         val statement = connection.prepareStatement("SELECT * FROM Account WHERE name = ?")
         statement.setString(1, name)
         val result = statement.executeQuery()
@@ -46,6 +55,9 @@ class AccountDao(val connection: Connection){
         return result.getInt("id")
     }
 
+    /**
+     *
+     */
     fun addResult(result: GameResult, name: String) {
         resultDao.add(result, findAccountId(name))
     }
@@ -57,5 +69,4 @@ class AccountDao(val connection: Connection){
         statement.execute()
         statement.close()
     }
-
 }

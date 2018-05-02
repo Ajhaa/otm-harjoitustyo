@@ -1,14 +1,25 @@
 package domain.Enums
 
+/**
+ * A rank consists of tier, which is an enum, and phase, which is a number. There are
+ * 7 tiers. 6 of them have 5 phases, grandmaster has only one.
+ */
 class Rank(tier: Tier, phase: Int) {
     val tier = tier
     val phase = phase
 
+    /**
+     * returns the rank as a integer for easier handling.
+     */
     fun getRankAsNumber(): Int {
         return tier.ordinal * 5 + phase
     }
 
-    fun increaseRank() : Rank {
+    /**
+     * returns a new rank, which is one phase higher than the object it was called from. If phase overflows (goes above 5), increments tier.
+     * No effect if rank is grandmaster
+     */
+    fun increaseRank(): Rank {
         if (this.tier == Tier.GrandChampion) {
             return this
         }
@@ -22,10 +33,13 @@ class Rank(tier: Tier, phase: Int) {
         }
 
         return Rank(newTier, newPhase)
-
     }
 
-    fun decreaseRank() : Rank {
+    /**
+     * returns a new rank, which is one phase lower than the object it was called from. If phase goes below one, decrements tier.
+     * No effect if rank is Bronze 1
+     */
+    fun decreaseRank(): Rank {
         if (this.tier == Tier.Bronze && this.phase == 1) {
             return this
         }
@@ -41,7 +55,6 @@ class Rank(tier: Tier, phase: Int) {
         }
 
         return Rank(newTier, newPhase)
-
     }
 
     override fun toString(): String {
@@ -52,6 +65,4 @@ class Rank(tier: Tier, phase: Int) {
         val o = other as Rank
         return o.tier == tier && o.phase == phase
     }
-
-
 }

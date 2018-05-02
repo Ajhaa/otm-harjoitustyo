@@ -1,6 +1,5 @@
 package db
 
-import java.sql.Connection
 import java.sql.DriverManager
 
 class Database(address: String) {
@@ -10,8 +9,6 @@ class Database(address: String) {
         val createAccount = connection.prepareStatement("CREATE TABLE IF NOT EXISTS Account (" +
                 " id integer PRIMARY KEY," +
                 " name VARCHAR)")
-
-
 
         val createResult = connection.prepareStatement("CREATE TABLE IF NOT EXISTS Result (" +
                 " id integer PRIMARY KEY," +
