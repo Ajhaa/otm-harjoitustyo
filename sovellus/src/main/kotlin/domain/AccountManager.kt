@@ -34,6 +34,13 @@ class AccountManager(val accountDao: AccountDao) {
     }
 
     /**
+     * sets the current account to null
+     */
+    fun logout() {
+        currentAccount = null
+    }
+
+    /**
      * returns current account without checking if its null.
      * errors is current account is null, call safely
      * @return the corrent logged in account

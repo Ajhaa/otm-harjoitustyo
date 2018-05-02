@@ -12,6 +12,7 @@ import javafx.scene.control.ToggleGroup
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
+import kotlin.math.log
 
 class MainScene(val manager: AccountManager, val app: UserInterface) {
 
@@ -54,10 +55,17 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
             app.setStatisticScene()
         }
 
+        val logout = Button("log out")
+
+        logout.setOnAction {
+            manager.logout()
+            app.setLoginScene()
+        }
+
         val dropdowns = HBox(dropdown1, dropdown2)
 
         result.toggles.addAll(radio1, radio2)
-        screen.children.addAll(welcomeText, radio1, radio2, dropdowns, submit, toHistory, toStatistics)
+        screen.children.addAll(welcomeText, radio1, radio2, dropdowns, submit, toHistory, toStatistics, logout)
 
         return Scene(screen)
     }

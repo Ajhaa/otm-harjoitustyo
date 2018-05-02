@@ -68,16 +68,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Result.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/kotlin/domain/Enums/Result.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Rank.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/main/kotlin/domain/Enums/Rank.kt">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,32 +100,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/kotlin/db/Database.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tier.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/main/kotlin/domain/Enums/Tier.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="60" lean-forward="false" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountManager.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountManager.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/main/kotlin/domain/AccountManager.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="78" column="55" lean-forward="false" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+            <state relative-caret-position="375">
+              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainScene.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/MainScene.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="67" column="110" lean-forward="false" selection-start-line="67" selection-start-column="110" selection-end-line="67" selection-end-column="110" />
+              <folding>
+                <element signature="e#12#412#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInteface.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/UserInteface.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Statistics.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/Statistics.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#308#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -772,14 +776,11 @@
         <option value="$PROJECT_DIR$/../src/test/kotlin/test/AccountTest.kt" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/ui/LoginScene.kt" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/ui/MatchHistory.kt" />
-        <option value="$PROJECT_DIR$/../src/main/kotlin/ui/MainScene.kt" />
-        <option value="$PROJECT_DIR$/../src/main/kotlin/ui/Statistics.kt" />
         <option value="$PROJECT_DIR$/../build.gradle" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/db/Database.kt" />
         <option value="$PROJECT_DIR$/../src/test/kotlin/test/AccountDaoTest.kt" />
         <option value="$PROJECT_DIR$/../src/test/kotlin/test/ResultDaoTest.kt" />
         <option value="$PROJECT_DIR$/../src/test/kotlin/test/DatabaseTest.kt" />
-        <option value="$PROJECT_DIR$/../src/main/kotlin/ui/UserInteface.kt" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/domain/GameResult.kt" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/domain/Enums/Tier.kt" />
         <option value="$PROJECT_DIR$/../src/test/kotlin/test/AccountManagerTest.kt" />
@@ -788,8 +789,11 @@
         <option value="$PROJECT_DIR$/../src/main/kotlin/db/AccountDao.kt" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/db/ResultDao.kt" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/domain/Account.kt" />
-        <option value="$PROJECT_DIR$/../src/main/kotlin/domain/AccountManager.kt" />
         <option value="$PROJECT_DIR$/../src/main/kotlin/domain/StatisticsGenerator.kt" />
+        <option value="$PROJECT_DIR$/../src/main/kotlin/ui/Statistics.kt" />
+        <option value="$PROJECT_DIR$/../src/main/kotlin/domain/AccountManager.kt" />
+        <option value="$PROJECT_DIR$/../src/main/kotlin/ui/UserInteface.kt" />
+        <option value="$PROJECT_DIR$/../src/main/kotlin/ui/MainScene.kt" />
       </list>
     </option>
   </component>
@@ -932,7 +936,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.docs">
+  <component name="RunManager" selected="Gradle.run">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="HTML_USED" value="false" />
@@ -1266,14 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/MainScene.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/MatchHistory.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1288,26 +1284,6 @@
         <state relative-caret-position="119">
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/UserInteface.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding>
-            <element signature="e#12#170#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/Statistics.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-          <folding>
-            <element signature="e#12#241#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1387,16 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/db/AccountDao.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="89" lean-forward="false" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
-          <folding>
-            <element signature="e#12#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/main/kotlin/db/ResultDao.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -1421,11 +1387,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/Statistics.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/db/AccountDao.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="89" lean-forward="false" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
+          <folding>
+            <element signature="e#12#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../src/main/kotlin/domain/AccountManager.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="78" column="55" lean-forward="false" selection-start-line="78" selection-start-column="55" selection-end-line="78" selection-end-column="55" />
+        <state relative-caret-position="375">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/UserInteface.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/main/kotlin/ui/MainScene.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="67" column="110" lean-forward="false" selection-start-line="67" selection-start-column="110" selection-end-line="67" selection-end-column="110" />
+          <folding>
+            <element signature="e#12#412#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

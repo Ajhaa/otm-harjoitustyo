@@ -6,7 +6,9 @@ import javafx.scene.Scene
 import javafx.scene.chart.LineChart
 import javafx.scene.chart.NumberAxis
 import javafx.scene.chart.XYChart
+import javafx.scene.control.Button
 import javafx.scene.input.KeyCode
+import javafx.scene.layout.VBox
 
 class Statistics(var manager: AccountManager, val app: UserInterface) {
 
@@ -31,12 +33,12 @@ class Statistics(var manager: AccountManager, val app: UserInterface) {
         }
 
         chart.data.add(data)
-        val scene = Scene(chart)
-        scene.setOnKeyPressed { event ->
-            if (event.code == KeyCode.ESCAPE) {
-                app.setMainScene()
-            }
-        }
+
+        val returnButton = Button("return")
+        returnButton.setOnAction { app.setMainScene() }
+
+        var screen = VBox(chart, returnButton)
+        val scene = Scene(screen)
 
         return scene
     }

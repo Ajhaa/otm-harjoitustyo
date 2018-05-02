@@ -26,6 +26,10 @@ class UserInterface : Application() {
         primaryStage?.show()
     }
 
+    fun setLoginScene() {
+        primaryStage?.scene = LoginScene(manager, this).getScene()
+    }
+
     fun setMainScene() {
         primaryStage?.scene = MainScene(manager, this).getScene()
     }
