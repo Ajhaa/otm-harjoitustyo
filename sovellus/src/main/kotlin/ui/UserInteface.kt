@@ -16,8 +16,6 @@ class UserInterface : Application() {
 
     override fun init() {
         scene = LoginScene(manager, this).getScene()
-        //one hardcoded account for now, will delete later
-        manager.createAccount("atte")
     }
 
     override fun start(stage: Stage) {
@@ -40,5 +38,9 @@ class UserInterface : Application() {
 
     fun setStatisticScene() {
         primaryStage?.scene = Statistics(manager, this).getScene()
+    }
+
+    fun setRegistrationScene() {
+        primaryStage?.scene = NewAccountScene(this, manager).getScene()
     }
 }

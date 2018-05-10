@@ -20,27 +20,44 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
         var screen = VBox()
         var welcomeText = Text("Welcome ${manager.getCurrentAccount()}\nRecord a result:")
 
-        val radio1 = RadioButton("win")
-        val radio2 = RadioButton("loss")
+        val radioWin = RadioButton("win")
+        val radioLoss = RadioButton("loss")
 
-        val dropdown1 = ComboBox<Tier>()
+
+/*        val dropdown1 = ComboBox<Tier>()
         dropdown1.items.addAll(Tier.values())
 
         val dropdown2 = ComboBox<Int>()
-        dropdown2.items.addAll(1..5)
+        dropdown2.items.addAll(1..5) */
+
+        val radioRankUp = RadioButton("promotion")
+        val radioRankNoChange = RadioButton("no change")
+        val radioRankDown = RadioButton("demotion")
 
         var result = ToggleGroup()
+        result.toggles.addAll(radioWin, radioLoss)
+
+        val rankChange = ToggleGroup()
+        rankChange.toggles.addAll(radioRankUp, radioRankNoChange, radioRankDown)
+
+        rankChange
 
         val submit = Button("submit")
 
         submit.setOnAction {
-            val radio = result.selectedToggle as RadioButton
-            val res = if (radio.text == "win") Result.Win else Result.Loss
+            val resultRadio = result.selectedToggle as RadioButton
+            val rankRadio = rankChange.selectedToggle as RadioButton
 
-            val drop1 = dropdown1.value
-            val drop2 = dropdown2.value
+            val res = if (resultRadio.text == "win") Result.Win else Result.Loss
 
-            manager.addResult(Rank(drop1, drop2), res)
+            var rank = manager.getLatestResult().rank
+            if (rankRadio.text == "promotion") {
+                rank = rank.increaseRank()
+            } else if (rankRadio.text == "demotion") {
+                rank = rank.decreaseRank()
+            }
+
+            manager.addResult(rank, res)
         }
 
         val toHistory = Button("match history")
@@ -62,10 +79,8 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
             app.setLoginScene()
         }
 
-        val dropdowns = HBox(dropdown1, dropdown2)
-
-        result.toggles.addAll(radio1, radio2)
-        screen.children.addAll(welcomeText, radio1, radio2, dropdowns, submit, toHistory, toStatistics, logout)
+        val rankRadios = HBox(radioRankUp, radioRankNoChange, radioRankDown)
+        screen.children.addAll(welcomeText, radioWin, radioLoss, rankRadios, submit, toHistory, toStatistics, logout)
 
         return Scene(screen)
     }

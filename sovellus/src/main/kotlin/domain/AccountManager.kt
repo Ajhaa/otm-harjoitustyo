@@ -3,6 +3,7 @@ package domain
 import db.AccountDao
 import domain.Enums.Rank
 import domain.Enums.Result
+import domain.Enums.Tier
 
 /**
  * The AccountManager class keeps track of the registered accounts, and
@@ -51,11 +52,16 @@ class AccountManager(val accountDao: AccountDao) {
 
     /**
      * creates a new account, adds it to the list of accounts and the database.
+     * also adds a "ghost" result to signify the starting rank
      * @param accountName name of the new account
+     * @param initalTier initial tier of the account
+     * @param initalPhase inital phase of the account
      */
 
-    fun createAccount(accountName: String): Boolean {
-        val account = Account(accountName, ArrayList())
+    fun createAccount(accountName: String, initialTier: Tier, initalPhase: Int): Boolean {
+        val account = Account(accountName)
+        account.addResult(GameResult(Rank(initialTier, initalPhase), Result.Win))
+
         if (!accounts.contains(account)) {
             accounts.add(account)
             accountDao.add(account)
@@ -63,6 +69,7 @@ class AccountManager(val accountDao: AccountDao) {
         }
         return false
     }
+
 
     /**
      * adds a new result for the current account.
@@ -79,6 +86,13 @@ class AccountManager(val accountDao: AccountDao) {
         val status = currentAccount?.addResult(newResult)
         accountDao.addResult(newResult, currentAccount!!.name)
         return status != null
+    }
+
+    /**
+     * Returns the lates result of current account
+     */
+    fun getLatestResult(): GameResult {
+        return currentAccount!!.results.last()
     }
 
     /**

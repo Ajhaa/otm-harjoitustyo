@@ -11,15 +11,15 @@ import javafx.scene.layout.VBox
 class LoginScene(val manager: AccountManager, val app: UserInterface) {
     fun getScene(): Scene {
 
-        val registrationField = TextField()
-        val registrationAnchor = AnchorPane(registrationField)
+       // val registrationField = TextField()
+       // val registrationAnchor = AnchorPane(registrationField)
         val registrationButton = Button("create profile")
 
         val loginField = TextField()
         val loginAnchor = AnchorPane(loginField)
         val loginButton = Button("login")
 
-        val screen = VBox(registrationAnchor, registrationButton , loginAnchor, loginButton)
+        val screen = VBox(loginAnchor, loginButton, registrationButton)
         val scene = Scene(screen, 256.0, 144.0)
 
         loginButton.setOnAction {
@@ -29,14 +29,12 @@ class LoginScene(val manager: AccountManager, val app: UserInterface) {
         }
 
         registrationButton.setOnAction {
-            manager.createAccount(registrationField.text)
-            registrationField.text = ""
+            app.setRegistrationScene()
         }
 
         AnchorPane.setLeftAnchor(loginField, 40.0)
         AnchorPane.setRightAnchor(loginField, 40.0)
-        AnchorPane.setLeftAnchor(registrationField, 40.0)
-        AnchorPane.setRightAnchor(registrationField, 40.0)
+
 
         screen.spacing = 5.0
         screen.alignment = Pos.CENTER
