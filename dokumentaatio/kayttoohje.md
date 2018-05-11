@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa tiedosto [otm-tracker.jar](https://github.com/Ajhaa/otm-harjoitustyo/releases/tag/0.2)
+Lataa tiedosto [otm-tracker.jar](https://github.com/Ajhaa/otm-harjoitustyo/releases/tag/1.0)
 
 
 ## Ohjelman käynnistäminen
