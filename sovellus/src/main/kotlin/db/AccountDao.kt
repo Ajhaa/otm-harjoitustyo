@@ -33,7 +33,7 @@ open class AccountDao(val connection: Connection) {
      * @param name the name of the account
      */
     open fun findByName(name: String): Account? {
-        val statement = connection.prepareStatement("SELECT * FROM Account WHERE name = ?")
+        val statement = connection.prepareStatement("SELECT * FROM Account WHERE name=?")
         statement.setString(1, name)
         val result = statement.executeQuery()
 
@@ -54,8 +54,10 @@ open class AccountDao(val connection: Connection) {
         val statement = connection.prepareStatement("SELECT * FROM Account WHERE name = ?")
         statement.setString(1, name)
         val result = statement.executeQuery()
-
-        return result.getInt("id")
+        val ret = result.getInt("id")
+        statement.close()
+        result.close()
+        return ret
     }
 
     /**
@@ -81,11 +83,12 @@ open class AccountDao(val connection: Connection) {
      */
     open fun deleteAccount(name: String) {
         val id = findAccountId(name)
-        val statement = connection.prepareStatement("DELETE * FROM Result WHERE account_id=?")
+        val statement = connection.prepareStatement("DELETE FROM Result WHERE account_id=?")
         statement.setInt(1, id)
         statement.execute()
-        val statement2 = connection.prepareStatement("DELETE * FROM Account WHERE name=?")
-        statement2.setString(1, name)
+        val statement2 = connection.prepareStatement("DELETE FROM Account WHERE id=?")
+        println("Deleting $name")
+        statement2.setInt(1, id)
         statement.execute()
         statement.close()
         statement2.close()

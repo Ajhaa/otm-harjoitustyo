@@ -123,5 +123,6 @@ open class AccountManager(val accountDao: AccountDao) {
         val accountToRemove = currentAccount!!
         logout()
         accountDao.deleteAccount(accountToRemove.name)
+        accounts.remove(accountToRemove)
     }
 }

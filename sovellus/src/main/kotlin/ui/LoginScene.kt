@@ -21,10 +21,15 @@ class LoginScene(val manager: AccountManager, val app: UserInterface) {
         val scene = Scene(screen, 256.0, 144.0)
 
         loginButton.setOnAction {
-            if (manager.login(loginField.text)) {
-                app.setMainScene()
-            } else {
-                val alert = Alert(Alert.AlertType.ERROR, "No user \"${loginField.text}\"")
+            try {
+                if (manager.login(loginField.text)) {
+                    app.setMainScene()
+                } else {
+                    val alert = Alert(Alert.AlertType.ERROR, "No user \"${loginField.text}\"")
+                    alert.show()
+                }
+            } catch (e: Exception) {
+                val alert = Alert(Alert.AlertType.ERROR, "Please enter a username")
                 alert.show()
             }
         }

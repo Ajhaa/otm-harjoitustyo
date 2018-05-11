@@ -12,6 +12,8 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import java.io.File
+import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class DatabaseTest {
@@ -58,6 +60,15 @@ class DatabaseTest {
         resultDao.add(result, 1)
         val all = resultDao.getByAccountId(1)
         assertTrue { all.size == 1 }
+    }
+
+    @Test
+    fun addResultAddsResult() {
+        val result = GameResult(Rank(Tier.Bronze, 1), Result.Win, Champion.Ashka)
+        accountDao.add(Account("atte"))
+        accountDao.addResult(result, "atte")
+        val find = accountDao.findByName("atte")
+        assertEquals(1, find!!.results.size)
     }
 
     @After

@@ -7,6 +7,7 @@ import javafx.scene.Scene
 import javafx.scene.control.*
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
+import javafx.scene.paint.Color
 import javafx.scene.text.Text
 
 class MainScene(val manager: AccountManager, val app: UserInterface) {
@@ -87,8 +88,20 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
             app.setLoginScene()
         }
 
+        val deleteAccount = Text("Delete account")
+        deleteAccount.fill = Color.BLUE
+        deleteAccount.isUnderline = true
+        deleteAccount.setOnMouseClicked {
+            var alert = Alert(Alert.AlertType.CONFIRMATION, "Are you sure?\nAccount deletion is permanent")
+            var res = alert.showAndWait()
+            if (res.get() == ButtonType.OK) {
+                manager.removeAccount()
+                app.setLoginScene()
+            }
+        }
+
         val rankRadios = HBox(radioRankUp, radioRankNoChange, radioRankDown)
-        screen.children.addAll(welcomeText, radioWin, radioLoss, championLabel, playedChampion, rankRadios, submit, toHistory, toStatistics, logout)
+        screen.children.addAll(welcomeText, radioWin, radioLoss, championLabel, playedChampion, rankRadios, submit, toHistory, toStatistics, logout, deleteAccount)
 
         return Scene(screen)
     }

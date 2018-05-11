@@ -12,7 +12,6 @@ import org.junit.Before
 import org.junit.Test
 import test.mocs.AccountDaoMock
 import kotlin.test.assertEquals
-import kotlin.test.expect
 
 class StatisticsTest {
     var database = Database("jdbc:sqlite:test.db")
