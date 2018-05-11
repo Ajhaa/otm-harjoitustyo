@@ -32,13 +32,22 @@ Käyttäjät ja pelien tulokset tallenetaan sqlite-tietokantaan. Tietokannassa o
 Tietokantayhteydestä ja kannan luomisesta vastaa luokka Database. Itse tallennus- ja hakuoperaatioista vastaavat luokat AccountDao ja ResultDao. Ohjelma lataa kaikki käyttäjät ja tulokset aluksi, ja lisää uudet sekä ohjelmallisesti että tietokantaan.
 
 # Päätoiminnallisuudet
-Muutama päätoiminnallisuus sekvenssikaaviona.
+Muutama päätoiminnallisuus sekvenssikaaviona ja tekstikuvauksena.
 ## Sisäänkirjautuminen
+Kun käyttäjä kirjautuu sisään, AccountManager tarkistaa, onko käyttäjätunnusta olemassa. Jos on, se asetetaan AccountManagerin aktiiviseksi käyttäjäksi, ja scene vaihdetaan pääruutuun
 <img src="https://i.imgur.com/oZgLAsx.png">
 
+## Käyttäjätunnuksen luonti
+Kun käyttäjätunnus luodaan, AccountManager tarkistaa, onko käyttäjää olemassa. Jos ei ole, luodaan uusi käyttäjä, joka tallennetaan sekä tietokantaan AccountDaon kautta, että AccountManagerin listaan.
+
+## Käyttäjätunnuksen poisto
+POistettava käyttäjätunnus poistetaan sekä tietokannasta että AccountManagerin listasta. Tietokannasta poistetaan myös käyttäjään liittyvät pelitulokset.
+
 ## Hahmotilastojen haku
-<img src="https://i.imgur.com/1Fsx9Vq.png">
+<img src="https://i.imgur.com/1Fsx9Vq.png">  
+
 ## Otteluhistorian haku
+
 Kun käyttäjä painaa 'match history' -nappia, sovellus toimii seuraavasti.
 <img src="https://i.imgur.com/YZoY5rR.png">
 
