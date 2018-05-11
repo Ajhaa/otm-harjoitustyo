@@ -8,7 +8,7 @@ Tämä on otm harjoitustyö Kotinilla. Ohjelmalla voi pitää kirjaa Battlerite-
 [Käyttöohje](https://github.com/Ajhaa/otm-harjoitustyo/tree/master/dokumentaatio/kayttoohje.md)  
 [Testausdokumentti](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/testaus.md)
   
-[release 0.2](https://github.com/Ajhaa/otm-harjoitustyo/releases/tag/0.2)
+[release 1.0](https://github.com/Ajhaa/otm-harjoitustyo/releases/tag/1.0)
 
 
 Ohjelma ajetaan kansiossa `/sovellus` komennolla `gradle run`. 
