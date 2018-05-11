@@ -25,9 +25,22 @@ Dataa rakennetaan pelaajan sijoituksen kehityksestä, pelatuista hahmoista, sek�
 
 
 
-<img src="https://i.imgur.com/YZoY5rR.png">
 
 # Pysyväistallennus
-Käyttäjät ja pelien tulokset tallenetaan sqlite-tietokantaan. Tietokannassa on kaksi taulua.  
+Käyttäjät ja pelien tulokset tallenetaan sqlite-tietokantaan. Tietokannassa on kaksi taulua.   
 <img src="https://yuml.me/06e7c847.png">  
-Tietokantayhteydestä ja kannan luomisesta vastaa luokka Database. Itse tallennus- ja hakuoperaatioista vastaavat luokat AccountDao ja ResultDao.
+Tietokantayhteydestä ja kannan luomisesta vastaa luokka Database. Itse tallennus- ja hakuoperaatioista vastaavat luokat AccountDao ja ResultDao. Ohjelma lataa kaikki käyttäjät ja tulokset aluksi, ja lisää uudet sekä ohjelmallisesti että tietokantaan.
+
+# Päätoiminnallisuudet
+Muutama päätoiminnallisuus sekvenssikaaviona.
+## Sisäänkirjautuminen
+<img src="https://i.imgur.com/oZgLAsx.png">
+
+## Hahmotilastojen haku
+<img src="https://i.imgur.com/1Fsx9Vq.png">
+## Otteluhistorian haku
+Kun käyttäjä painaa 'match history' -nappia, sovellus toimii seuraavasti.
+<img src="https://i.imgur.com/YZoY5rR.png">
+
+
+
