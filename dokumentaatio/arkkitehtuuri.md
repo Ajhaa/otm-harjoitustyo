@@ -1,6 +1,6 @@
 # Rakenne
 Ohjelmassa on kolme tasoa: tietokannan kanssa kommunikoiva db-pakkaus, sovelluslogiikasta vastaava domain ja käyttöliittymästä vastaava ui.  
-<img src="https://yuml.me/f6c88072.png">
+<img src="https://yuml.me/5761a52c.png">
 
 # Käyttöliittymä
 
