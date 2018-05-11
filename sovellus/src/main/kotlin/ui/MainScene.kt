@@ -4,7 +4,13 @@ import domain.AccountManager
 import domain.Enums.Champion
 import domain.Enums.Result
 import javafx.scene.Scene
-import javafx.scene.control.*
+import javafx.scene.control.RadioButton
+import javafx.scene.control.Label
+import javafx.scene.control.ComboBox
+import javafx.scene.control.ToggleGroup
+import javafx.scene.control.Button
+import javafx.scene.control.Alert
+import javafx.scene.control.ButtonType
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 import javafx.scene.paint.Color

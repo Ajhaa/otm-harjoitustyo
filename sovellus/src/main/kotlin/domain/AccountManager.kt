@@ -119,6 +119,9 @@ open class AccountManager(val accountDao: AccountDao) {
                 .asInt
     }
 
+    /**
+     * removes the current account and logs out
+     */
     fun removeAccount() {
         val accountToRemove = currentAccount!!
         logout()

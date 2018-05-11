@@ -16,7 +16,6 @@ class AccountDaoMock(connection: Connection) : AccountDao(connection) {
         return null
     }
 
-
     override fun addResult(result: GameResult, name: String) {
     }
 

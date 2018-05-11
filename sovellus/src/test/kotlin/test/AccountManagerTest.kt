@@ -1,6 +1,5 @@
 package test
 
-import db.AccountDao
 import db.Database
 import domain.AccountManager
 import domain.Enums.Champion

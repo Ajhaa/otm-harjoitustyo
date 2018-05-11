@@ -9,7 +9,6 @@ import javafx.scene.chart.NumberAxis
 import javafx.scene.chart.XYChart
 import javafx.scene.control.Button
 import javafx.scene.layout.VBox
-import java.util.*
 
 class ChampionStatistics(val manager: AccountManager, val app: UserInterface) {
 

@@ -2,7 +2,6 @@ package domain
 
 import domain.Enums.Champion
 import domain.Enums.Result
-import java.util.*
 import kotlin.collections.HashMap
 
 /**
@@ -20,7 +19,7 @@ class StatisticsGenerator(val manager: AccountManager) {
         var data = HashMap<Number, Number>()
         var i = 1
 
-        for (r in results!!) {
+        for (r in results) {
             data[i] = r.rank.getRankAsNumber()
             i++
         }

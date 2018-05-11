@@ -30,8 +30,6 @@ class StatisticsTest {
         manager.addResult(Rank(Tier.Gold, 1), Result.Win, Champion.Ashka)
         manager.addResult(Rank(Tier.Gold, 2), Result.Loss, Champion.Alysia)
         stats = StatisticsGenerator(manager)
-
-
     }
 
     @Test
@@ -55,7 +53,7 @@ class StatisticsTest {
     @Test
     fun getWinrateReturnsCorrectNumber() {
         val winrate = stats!!.getWinRate()
-        assertEquals(2.0/3.0, winrate)
+        assertEquals(2.0 / 3.0, winrate)
     }
 
     @After
@@ -63,6 +61,4 @@ class StatisticsTest {
         manager.removeAccount()
         database.closeConnection()
     }
-
-
 }
