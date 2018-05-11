@@ -5,8 +5,8 @@ Tämä on otm harjoitustyö Kotinilla. Ohjelmalla voi pitää kirjaa Battlerite-
 [Vaatimusmäärittely](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)  
 [Tuntikirjanpito](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/ty%C3%B6aikakirjanpito.md)  
 [Arkkitehtuurikuvaus](https://github.com/Ajhaa/otm-harjoitustyo/tree/master/dokumentaatio/arkkitehtuuri.md)  
-[Käyttöohje](https://github.com/Ajhaa/otm-harjoitustyo/tree/master/dokumentaatio/kayttoohje.md)
-[Testidokumentti](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+[Käyttöohje](https://github.com/Ajhaa/otm-harjoitustyo/tree/master/dokumentaatio/kayttoohje.md)  
+[Testausdokumentti](https://github.com/Ajhaa/otm-harjoitustyo/blob/master/dokumentaatio/testaus.md)
   
 [release 0.2](https://github.com/Ajhaa/otm-harjoitustyo/releases/tag/0.2)
 
