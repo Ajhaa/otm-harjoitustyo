@@ -5,6 +5,9 @@ import java.sql.DriverManager
 class Database(address: String) {
     val connection = DriverManager.getConnection(address)
 
+    /**
+     * initializes the database if not initialized already
+     */
     init {
         val createAccount = connection.prepareStatement("CREATE TABLE IF NOT EXISTS Account (" +
                 " id integer PRIMARY KEY," +
@@ -26,6 +29,9 @@ class Database(address: String) {
         createResult.close()
     }
 
+    /**
+     * closes the connection. Used in tests
+     */
     fun closeConnection() {
         connection.close()
     }

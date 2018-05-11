@@ -10,19 +10,21 @@ import domain.Enums.Tier
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import test.mocks.AccountManagerMock
+import test.mocs.AccountDaoMock
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class AccountManagerTest {
     var database = Database("jdbc:sqlite:test.db")
-    var manager = AccountManager(AccountDao(database.connection))
+    var accountDao = AccountDaoMock(database.connection)
+    var manager = AccountManager(accountDao)
 
     @Before
     fun setup() {
         database = Database("jdbc:sqlite:test.db")
-        manager = AccountManager(AccountDao(database.connection))
+        accountDao = AccountDaoMock(database.connection)
+        manager = AccountManager(accountDao)
     }
 
     @Test

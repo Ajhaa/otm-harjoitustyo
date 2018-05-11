@@ -10,9 +10,13 @@ import javafx.scene.text.Text
 
 class Statistics(val manager: AccountManager, val app: UserInterface) {
 
-    fun getScene() : Scene {
+    fun getScene(): Scene {
         val statistics = StatisticsGenerator(manager)
         val topText = Text("Statistics:")
+
+        if (statistics.winRateHistory().isEmpty()) {
+            throw Exception("Record some matches first!")
+        }
 
         val winPercentage = "%.2f".format(statistics.getWinRate()*100)
 

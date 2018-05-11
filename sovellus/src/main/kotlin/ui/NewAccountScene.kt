@@ -35,7 +35,6 @@ class NewAccountScene(val app: UserInterface, val manager: AccountManager) {
                     val message = Alert(Alert.AlertType.INFORMATION, "Created account ${registrationField.text}")
                     message.show()
                 }
-
             } catch (e: Exception) {
                 val alert = Alert(Alert.AlertType.ERROR, "No blank fields")
                 alert.show()

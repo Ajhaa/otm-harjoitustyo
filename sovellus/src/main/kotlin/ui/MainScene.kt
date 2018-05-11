@@ -61,7 +61,12 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
         val toHistory = Button("match history")
 
         toHistory.setOnAction {
-            app.setHistoryScene()
+            try {
+                app.setHistoryScene()
+            } catch (e: Exception) {
+                val alert = Alert(Alert.AlertType.INFORMATION, e.message)
+                alert.show()
+            }
         }
 
         val toStatistics = Button("stats")
@@ -70,7 +75,7 @@ class MainScene(val manager: AccountManager, val app: UserInterface) {
             try {
                 app.setStatisticScene()
             } catch (e: Exception) {
-                val message = Alert(Alert.AlertType.INFORMATION, "No statistics to show yet, record some matches first!")
+                val message = Alert(Alert.AlertType.INFORMATION, e.message)
                 message.show()
             }
         }

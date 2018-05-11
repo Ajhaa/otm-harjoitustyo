@@ -8,7 +8,6 @@ import javafx.scene.chart.NumberAxis
 import javafx.scene.chart.XYChart
 import javafx.scene.control.Button
 import javafx.scene.layout.VBox
-import javafx.scene.text.Text
 
 class WinrateHistory(val manager: AccountManager, val app: UserInterface) {
 

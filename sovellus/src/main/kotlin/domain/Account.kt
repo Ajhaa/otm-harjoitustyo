@@ -30,6 +30,9 @@ class Account(var name: String, val results: ArrayList<GameResult>) {
         return other.name == this.name
     }
 
+    /**
+     * returns the name of the account
+     */
     override fun toString(): String {
         return name
     }

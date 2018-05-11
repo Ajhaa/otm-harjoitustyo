@@ -93,7 +93,7 @@ open class AccountManager(val accountDao: AccountDao) {
     /**
      * returns the result without the first entry, which is just for inital rank
      */
-    fun getResults() : ArrayList<GameResult>{
+    fun getResults(): ArrayList<GameResult> {
         val results = currentAccount!!.results
         val copy = ArrayList(results)
         copy.removeAt(0)
@@ -117,5 +117,11 @@ open class AccountManager(val accountDao: AccountDao) {
                 .mapToInt { n -> n.rank.getRankAsNumber() }
                 .max()
                 .asInt
+    }
+
+    fun removeAccount() {
+        val accountToRemove = currentAccount!!
+        logout()
+        accountDao.deleteAccount(accountToRemove.name)
     }
 }

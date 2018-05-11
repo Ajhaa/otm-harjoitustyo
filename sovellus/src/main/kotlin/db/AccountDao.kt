@@ -13,7 +13,7 @@ open class AccountDao(val connection: Connection) {
     /**
      * returns all of the accounts in the database as a list. Uses result dao to fetch the corresponding results
      */
-    fun getAll(): ArrayList<Account> {
+    open fun getAll(): ArrayList<Account> {
         val statement = connection.createStatement()
         val result = statement.executeQuery("SELECT * FROM Account")
 
@@ -32,7 +32,7 @@ open class AccountDao(val connection: Connection) {
      * used to find a single account by name. returns null if no account found
      * @param name the name of the account
      */
-    fun findByName(name: String): Account? {
+    open fun findByName(name: String): Account? {
         val statement = connection.prepareStatement("SELECT * FROM Account WHERE name = ?")
         statement.setString(1, name)
         val result = statement.executeQuery()
@@ -47,6 +47,9 @@ open class AccountDao(val connection: Connection) {
         return Account(result.getString("name"), results)
     }
 
+    /**
+     * finds the id of an account
+     */
     private fun findAccountId(name: String): Int {
         val statement = connection.prepareStatement("SELECT * FROM Account WHERE name = ?")
         statement.setString(1, name)
@@ -56,17 +59,35 @@ open class AccountDao(val connection: Connection) {
     }
 
     /**
-     *
+     * adds a new result for the acccount whose name is given in the parameter
      */
-    fun addResult(result: GameResult, name: String) {
+    open fun addResult(result: GameResult, name: String) {
         resultDao.add(result, findAccountId(name))
     }
 
-    fun add(account: Account) {
+    /**
+     * adds a new account to the database
+     */
+    open fun add(account: Account) {
         val statement = connection.prepareStatement("INSERT INTO Account (name) values(?)")
         statement.setString(1, account.name)
 
         statement.execute()
         statement.close()
+    }
+
+    /**
+     * removes and account and all related results
+     */
+    open fun deleteAccount(name: String) {
+        val id = findAccountId(name)
+        val statement = connection.prepareStatement("DELETE * FROM Result WHERE account_id=?")
+        statement.setInt(1, id)
+        statement.execute()
+        val statement2 = connection.prepareStatement("DELETE * FROM Account WHERE name=?")
+        statement2.setString(1, name)
+        statement.execute()
+        statement.close()
+        statement2.close()
     }
 }

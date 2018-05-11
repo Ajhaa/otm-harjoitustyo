@@ -1,7 +1,6 @@
 package ui
 
 import domain.AccountManager
-import domain.Enums.Champion
 import domain.StatisticsGenerator
 import javafx.scene.Scene
 import javafx.scene.chart.BarChart
@@ -14,7 +13,7 @@ import java.util.*
 
 class ChampionStatistics(val manager: AccountManager, val app: UserInterface) {
 
-    fun getScene() : Scene {
+    fun getScene(): Scene {
         val statistics = StatisticsGenerator(manager)
 
         val xAxis = CategoryAxis()
@@ -22,7 +21,6 @@ class ChampionStatistics(val manager: AccountManager, val app: UserInterface) {
         val chart: BarChart<String, Number> = BarChart(xAxis, yAxis)
         chart.title = "Champion statistics"
         chart.isLegendVisible = false
-
 
         val championStats = statistics.getChampionRates()
 
@@ -38,7 +36,5 @@ class ChampionStatistics(val manager: AccountManager, val app: UserInterface) {
         returnButton.setOnAction { app.setStatisticScene() }
 
         return Scene(VBox(chart, returnButton))
-
-
     }
 }

@@ -11,10 +11,13 @@ class MatchHistory(val manager: AccountManager, val app: UserInterface) {
     fun getScene(): Scene {
         var screen = VBox()
 
+        if (manager.getResults().isEmpty()) {
+            throw Exception("No matches played")
+        }
+
         manager.getResults().forEach {
             n -> screen.children.add(Text(n.toString()))
         }
-
 
         val backButton = Button("back")
         backButton.setOnAction { app.setMainScene() }

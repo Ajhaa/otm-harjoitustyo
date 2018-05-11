@@ -11,9 +11,12 @@ import domain.GameResult
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
+import java.io.File
 import kotlin.test.assertTrue
 
 class DatabaseTest {
+    val db = File.createTempFile("test", "db")
+
     val database = Database("jdbc:sqlite:test.db")
     val connection = database.connection
     val accountDao = AccountDao(connection)

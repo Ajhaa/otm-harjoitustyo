@@ -42,6 +42,9 @@ class StatisticsGenerator(val manager: AccountManager) {
         return (wins / results.size.toDouble())
     }
 
+    /**
+     * returns history of the player's winrate in a <Int, Double> map
+     */
     fun winRateHistory(): Map<Int, Double> {
         val stats = HashMap<Int, Double>()
 
@@ -51,7 +54,7 @@ class StatisticsGenerator(val manager: AccountManager) {
             if (r.result == Result.Win) {
                 wins++
             }
-            stats[matches] = wins.toDouble()/matches
+            stats[matches] = wins.toDouble() / matches
             matches++
         }
 
@@ -61,7 +64,6 @@ class StatisticsGenerator(val manager: AccountManager) {
     /**
      * returns champion in a map sorted by games played
      */
-
     fun getChampionRates(): Map<Champion, Int> {
         val championData = HashMap<Champion, Int>()
 
