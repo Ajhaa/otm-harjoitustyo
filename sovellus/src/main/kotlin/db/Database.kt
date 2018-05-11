@@ -16,6 +16,7 @@ class Database(address: String) {
                 " tier VARCHAR," +
                 " phase integer," +
                 " result VARCHAR," +
+                " champion VARCHAR," +
                 " FOREIGN KEY (account_id) REFERENCES Account(id))")
 
         createAccount.execute()
@@ -23,5 +24,9 @@ class Database(address: String) {
 
         createAccount.close()
         createResult.close()
+    }
+
+    fun closeConnection() {
+        connection.close()
     }
 }

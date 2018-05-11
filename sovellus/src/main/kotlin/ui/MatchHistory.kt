@@ -10,11 +10,11 @@ class MatchHistory(val manager: AccountManager, val app: UserInterface) {
 
     fun getScene(): Scene {
         var screen = VBox()
-        var list = ArrayList<String>()
 
-        manager.getCurrentAccount()!!.results.forEach {
+        manager.getResults().forEach {
             n -> screen.children.add(Text(n.toString()))
         }
+
 
         val backButton = Button("back")
         backButton.setOnAction { app.setMainScene() }

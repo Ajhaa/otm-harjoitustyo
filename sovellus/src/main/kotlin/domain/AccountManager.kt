@@ -1,6 +1,7 @@
 package domain
 
 import db.AccountDao
+import domain.Enums.Champion
 import domain.Enums.Rank
 import domain.Enums.Result
 import domain.Enums.Tier
@@ -14,7 +15,7 @@ import domain.Enums.Tier
  * @constructor accountDao given with constructor
  */
 
-class AccountManager(val accountDao: AccountDao) {
+open class AccountManager(val accountDao: AccountDao) {
     private var currentAccount: Account? = null
     private var accounts = accountDao.getAll()
 
@@ -60,16 +61,17 @@ class AccountManager(val accountDao: AccountDao) {
 
     fun createAccount(accountName: String, initialTier: Tier, initalPhase: Int): Boolean {
         val account = Account(accountName)
-        account.addResult(GameResult(Rank(initialTier, initalPhase), Result.Win))
+        val result = GameResult(Rank(initialTier, initalPhase), Result.Win, Champion.Alysia)
 
         if (!accounts.contains(account)) {
             accounts.add(account)
             accountDao.add(account)
+            account.addResult(result)
+            accountDao.addResult(result, accountName)
             return true
         }
         return false
     }
-
 
     /**
      * adds a new result for the current account.
@@ -78,14 +80,24 @@ class AccountManager(val accountDao: AccountDao) {
      * @return true if the action was successful, false otherwise
      */
 
-    fun addResult(rank: Rank, result: Result): Boolean {
+    fun addResult(rank: Rank, result: Result, champion: Champion): Boolean {
         if (currentAccount == null) {
             return false
         }
-        val newResult = GameResult(rank, result)
+        val newResult = GameResult(rank, result, champion)
         val status = currentAccount?.addResult(newResult)
         accountDao.addResult(newResult, currentAccount!!.name)
         return status != null
+    }
+
+    /**
+     * returns the result without the first entry, which is just for inital rank
+     */
+    fun getResults() : ArrayList<GameResult>{
+        val results = currentAccount!!.results
+        val copy = ArrayList(results)
+        copy.removeAt(0)
+        return copy
     }
 
     /**

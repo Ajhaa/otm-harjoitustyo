@@ -7,7 +7,7 @@ import java.sql.Connection
 /**
  * used to access the Account table, and indirectly also the result table in the database
  */
-class AccountDao(val connection: Connection) {
+open class AccountDao(val connection: Connection) {
 
     val resultDao = ResultDao(connection)
     /**

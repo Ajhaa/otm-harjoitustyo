@@ -40,6 +40,18 @@ class UserInterface : Application() {
         primaryStage?.scene = Statistics(manager, this).getScene()
     }
 
+    fun setRankStatisticScene() {
+        primaryStage?.scene = RankStatistics(manager, this).getScene()
+    }
+
+    fun setChampionStatisticScene() {
+        primaryStage?.scene = ChampionStatistics(manager, this).getScene()
+    }
+
+    fun setWinrateHistoryScene() {
+        primaryStage?.scene = WinrateHistory(manager, this).getScene()
+    }
+
     fun setRegistrationScene() {
         primaryStage?.scene = NewAccountScene(this, manager).getScene()
     }

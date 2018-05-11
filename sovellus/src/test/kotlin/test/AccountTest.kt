@@ -1,6 +1,7 @@
 package test
 
 import domain.Account
+import domain.Enums.Champion
 import domain.Enums.Rank
 import domain.Enums.Result
 import domain.Enums.Tier
@@ -42,7 +43,7 @@ class AccountTest {
     @Test
     fun resultCanBeAdded() {
         val a1 = Account("atte")
-        val r = GameResult(Rank(Tier.Bronze, 1), Result.Win)
+        val r = GameResult(Rank(Tier.Bronze, 1), Result.Win, Champion.Ashka)
         a1.results.add(r)
         assertTrue(a1.results.contains(r))
     }

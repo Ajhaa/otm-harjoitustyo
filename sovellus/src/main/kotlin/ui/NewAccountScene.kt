@@ -3,15 +3,12 @@ package ui
 import domain.AccountManager
 import domain.Enums.Tier
 import javafx.scene.Scene
-import javafx.scene.control.Button
-import javafx.scene.control.ComboBox
-import javafx.scene.control.Label
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 
 class NewAccountScene(val app: UserInterface, val manager: AccountManager) {
-    fun getScene() : Scene {
+    fun getScene(): Scene {
         val registrationLabel = Label("Username")
         val registrationField = TextField()
 
@@ -27,7 +24,22 @@ class NewAccountScene(val app: UserInterface, val manager: AccountManager) {
 
         val submitButton = Button("Register")
         submitButton.setOnAction {
-            manager.createAccount(registrationField.text, tierDropdown.value, phaseDropdown.value)
+            try {
+                if (registrationField.text.isBlank()) {
+                    throw Exception("Empty Username!")
+                }
+                if (!manager.createAccount(registrationField.text, tierDropdown.value, phaseDropdown.value)) {
+                    val alert = Alert(Alert.AlertType.ERROR, "User \"${registrationField.text}\" already exists")
+                    alert.show()
+                } else {
+                    val message = Alert(Alert.AlertType.INFORMATION, "Created account ${registrationField.text}")
+                    message.show()
+                }
+
+            } catch (e: Exception) {
+                val alert = Alert(Alert.AlertType.ERROR, "No blank fields")
+                alert.show()
+            }
         }
 
         val returnButton = Button("Back")
@@ -36,7 +48,5 @@ class NewAccountScene(val app: UserInterface, val manager: AccountManager) {
         val screen = VBox(registrationLabel, registrationField, rankLabel, rankSelector, submitButton, returnButton)
 
         return Scene(screen)
-
-
     }
 }

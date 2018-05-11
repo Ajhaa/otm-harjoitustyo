@@ -3,6 +3,7 @@ import db.Database
 import db.AccountDao
 import db.ResultDao
 import domain.Account
+import domain.Enums.Champion
 import domain.Enums.Rank
 import domain.Enums.Result
 import domain.Enums.Tier
@@ -11,7 +12,6 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertTrue
-import kotlin.test.expect
 
 class DatabaseTest {
     val database = Database("jdbc:sqlite:test.db")
@@ -37,12 +37,12 @@ class DatabaseTest {
         accountDao.add(Account("atte"))
         val statement = connection.prepareStatement("SELECT * FROM Account WHERE name='atte'")
         val result = statement.executeQuery()
-        assertTrue{ result.next() }
+        assertTrue { result.next() }
     }
 
     @Test
     fun resultGetAllReturnsData() {
-        val statement = connection.prepareStatement("INSERT INTO Result (account_id, tier, phase, result) values (1, 'Bronze', 1, 'Win')")
+        val statement = connection.prepareStatement("INSERT INTO Result (account_id, tier, phase, result, champion) values (1, 'Bronze', 1, 'Win', 'Bakko')")
         statement.execute()
         statement.close()
         val result = resultDao.getByAccountId(1)
@@ -51,13 +51,11 @@ class DatabaseTest {
 
     @Test
     fun addAddsResult() {
-        val result = GameResult(Rank(Tier.Bronze, 1), Result.Win)
+        val result = GameResult(Rank(Tier.Bronze, 1), Result.Win, Champion.Ashka)
         resultDao.add(result, 1)
         val all = resultDao.getByAccountId(1)
         assertTrue { all.size == 1 }
     }
-
-
 
     @After
     fun close() {
@@ -74,6 +72,4 @@ class DatabaseTest {
         statement.close()
         statement2.close()
     }
-
-
 }

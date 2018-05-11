@@ -1,5 +1,6 @@
 package db
 
+import domain.Enums.Champion
 import domain.Enums.Rank
 import domain.Enums.Result
 import domain.Enums.Tier
@@ -25,7 +26,10 @@ class ResultDao(val connection: Connection) {
         val result = statement.executeQuery()
         while (result.next()) {
             val rank = Rank(Tier.valueOf(result.getString("tier")), result.getInt("phase"))
-            results.add(GameResult(rank, Result.valueOf(result.getString("result"))))
+            val outcome = Result.valueOf(result.getString("result"))
+            val champion = Champion.valueOf(result.getString(("champion")))
+
+            results.add(GameResult(rank, outcome, champion))
         }
 
         return results
@@ -38,11 +42,12 @@ class ResultDao(val connection: Connection) {
      */
 
     fun add(result: GameResult, accId: Int) {
-        val statement = connection.prepareStatement("INSERT INTO Result (account_id, tier, phase, result) values(?,?,?,?)")
+        val statement = connection.prepareStatement("INSERT INTO Result (account_id, tier, phase, result, champion) values(?,?,?,?,?)")
         statement.setInt(1, accId)
         statement.setString(2, result.rank.tier.toString())
         statement.setInt(3, result.rank.phase)
         statement.setString(4, result.result.toString())
+        statement.setString(5, result.champion.toString())
         statement.execute()
     }
 }
