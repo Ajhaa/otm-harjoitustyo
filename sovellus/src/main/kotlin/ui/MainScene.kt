@@ -12,7 +12,7 @@ import javafx.scene.text.Text
 class MainScene(val manager: AccountManager, val app: UserInterface) {
 
     fun getScene(): Scene {
-        var screen = VBox()
+        var screen = VBox(5.0)
         var welcomeText = Text("Welcome ${manager.getCurrentAccount()}\n" +
                 "Your current rank is: ${manager.getLatestResult().rank}\n" +
                 "Record a result:")

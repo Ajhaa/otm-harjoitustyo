@@ -5,6 +5,7 @@ import domain.StatisticsGenerator
 import javafx.scene.Scene
 import javafx.scene.control.Button
 import javafx.scene.layout.VBox
+import javafx.scene.paint.Color
 import javafx.scene.text.Text
 
 class Statistics(val manager: AccountManager, val app: UserInterface) {
@@ -16,6 +17,9 @@ class Statistics(val manager: AccountManager, val app: UserInterface) {
         val winPercentage = "%.2f".format(statistics.getWinRate()*100)
 
         val winRateText = Text("Win rate: $winPercentage%")
+        winRateText.fill = Color.BLUE
+        winRateText.isUnderline = true
+        winRateText.style = "-fx-cursor: hand"
 
         winRateText.setOnMouseClicked { app.setWinrateHistoryScene() }
 
@@ -28,7 +32,7 @@ class Statistics(val manager: AccountManager, val app: UserInterface) {
         val backButton = Button("Back")
         backButton.setOnAction { app.setMainScene() }
 
-        val screen = VBox(topText, winRateText, toRankStats, toChampionStats, backButton)
+        val screen = VBox(5.0, topText, winRateText, toRankStats, toChampionStats, backButton)
 
         return Scene(screen)
     }

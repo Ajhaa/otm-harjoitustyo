@@ -33,4 +33,6 @@ class StatisticsTest {
         val results = stats!!.getChampionRates()
         assertEquals(2, results[Champion.Ashka])
     }
+
+
 }
