@@ -16,4 +16,7 @@
 | 24.4  | 1,5  | Siivousyritys, dokumentaatio |
 | 26.4  | 3    | Tietokannat
 | 2.5   | 1,5  | Uloskirjautuminen, dokumentaatiota |
-|total  | 25,5 |
+| 10.5  | 3    | Hahmot, osa 1 |
+| 11.5  | 4    | Hahmojen tilastointi, popup-ikkunat |
+|       | 3    | Testaus, dokumentaatio
+|total  | 35,5|
